@@ -6,6 +6,8 @@
 
 🤖データベース不要のDiscord向けのシンプルな音楽ボット / Simple Music Bot for Discord without any database
 
+![GitHub](https://img.shields.io/github/license/nh-chitose/Discord-SimpleMusicBot)
+
 ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/nh-chitose/Discord-SimpleMusicBot/master)
 ![GitHub package.json dependency version (dep on branch)](https://img.shields.io/github/package-json/dependency-version/nh-chitose/Discord-SimpleMusicBot/oceanic.js/master)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/nh-chitose/Discord-SimpleMusicBot/master)
