@@ -2,14 +2,44 @@ name: 'Upstream Sync'
 
 on:
   schedule:
-    - cron:  '0 7,19 * * *'
+    - cron:  '0 1,7,13,19 * * *'
 
   workflow_dispatch:  
 
 jobs:
-  sync_latest_from_upstream:
+  sync_latest_master:
     runs-on: ubuntu-latest
-    name: Sync latest commits from upstream repo
+    name: Sync latest commits from master
+
+    steps:
+    - name: Checkout target repo
+      uses: actions/checkout@v3
+      with:
+        ref:  master
+
+    - name: Sync upstream changes
+      id: sync
+      uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
+      with:
+        target_sync_branch: master
+        target_repo_token: ${{ secrets.GITHUB_TOKEN }}
+        upstream_sync_branch: master
+        upstream_sync_repo: mtripg6666tdr/Discord-SimpleMusicBot
+
+    - name: New commits found
+      if: steps.sync.outputs.has_new_commits == 'true'
+      run: echo "New commits were found to sync."
+    
+    - name: No new commits
+      if: steps.sync.outputs.has_new_commits == 'false'
+      run: echo "There were no new commits."
+      
+    - name: Show value of 'has_new_commits'
+      run: echo ${{ steps.sync.outputs.has_new_commits }}
+      
+  sync_latest_v1-lts:
+    runs-on: ubuntu-latest
+    name: Sync latest commits from v1-lts
 
     steps:
     - name: Checkout target repo
