@@ -1,6 +1,6 @@
 {
   "name": "discord-music-bot",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "description": "Simple Music Bot for Discord without any database",
   "private": true,
   "engines": {
@@ -19,7 +19,7 @@
     "@discordjs/voice": "^0.16.0",
     "@mtripg6666tdr/async-lock": "^1.1.0",
     "@mtripg6666tdr/oceanic-command-resolver": "^1.0.0",
-    "@sinclair/typebox": "^0.27.8",
+    "@sinclair/typebox": "^0.28.1",
     "candyget": "^0.5.4",
     "comment-json": "^4.2.3",
     "dotenv": "^16.0.3",
@@ -60,6 +60,7 @@
     "eslint-plugin-license-header": "^0.6.0",
     "eslint-plugin-named-import-spacing": "^1.0.3",
     "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "mocha": "^10.2.0",
     "rimraf": "^5.0.0",
     "typescript": "^5.0.4"
