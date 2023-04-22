@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: Checkout target repo
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
       with:
         ref:  master
         persist-credentials: false
@@ -23,7 +23,7 @@ jobs:
       uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
       with:
         target_sync_branch: master
-        target_repo_token: ${{secrets.TOKEN_FOR_SYNC}}
+        target_repo_token: ${{ secrets.TOKEN_FOR_SYNC }}
         upstream_sync_branch: master
         upstream_sync_repo: mtripg6666tdr/Discord-SimpleMusicBot
 
