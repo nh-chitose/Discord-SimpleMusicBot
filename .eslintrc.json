@@ -14,8 +14,7 @@
     "import",
     "node",
     "license-header",
-    "named-import-spacing",
-    "unused-imports"
+    "named-import-spacing"
   ],
   "env": {
     "node": true
@@ -105,8 +104,6 @@
     "@typescript-eslint/return-await": ["warn", "in-try-catch"],
     "@typescript-eslint/await-thenable": "warn",
     "@typescript-eslint/object-curly-spacing": ["warn", "always"],
-    "@typescript-eslint/type-annotation-spacing": "warn",
-    "@typescript-eslint/no-floating-promises": "warn",
 
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/ban-ts-comment": "off",
@@ -117,7 +114,8 @@
     "@typescript-eslint/no-unsafe-return": "off",
     "@typescript-eslint/lines-between-class-members": "off",
     "@typescript-eslint/require-await": "off",
-    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/type-annotation-spacing": "warn",
+    "@typescript-eslint/no-floating-promises": "warn",
 
     // other plugins
     "eslint-comments/no-unused-disable": "error",
@@ -158,16 +156,6 @@
     "node/shebang": "error",
     "license-header/header": ["warn", "./util/license.js"],
     "named-import-spacing/named-import-spacing": "warn",
-    "unused-imports/no-unused-imports": "warn",
-    "unused-imports/no-unused-vars": [
-      "warn",
-      {
-        "vars": "all",
-        "varsIgnorePattern": "^_",
-        "args": "after-used",
-        "argsIgnorePattern": "^_"
-      }
-    ],
 
     // eslint rules
     "eol-last": ["error", "always"],
@@ -328,8 +316,7 @@
     "default-param-last": "off",
     "init-declarations": "off",
     "no-extra-semi": "off",
-    "indent": "off",
-    "no-unused-vars": "off"
+    "indent": "off"
   },
   "overrides": [
     {

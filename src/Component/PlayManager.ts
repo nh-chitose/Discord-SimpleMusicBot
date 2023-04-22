@@ -721,7 +721,7 @@ export class PlayManager extends ServerManagerBase<PlayManagerEvents> {
     }
     this.logger.warn(`Play failed (${this._errorCount}times)`);
     this.preparing = false;
-    this.stop({ force: true }).catch(this.logger.error);
+    await this.stop({ wait: true });
     if(this._errorCount >= this.retryLimit){
       if(this.server.queue.loopEnabled) this.server.queue.loopEnabled = false;
       if(this.server.queue.length === 1 && this.server.queue.queueLoopEnabled) this.server.queue.queueLoopEnabled = false;
