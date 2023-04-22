@@ -45,15 +45,15 @@ jobs:
     - name: Checkout target repo
       uses: actions/checkout@v3
       with:
-        ref:  master
+        ref:  v1-lts-lol
 
     - name: Sync upstream changes
       id: sync
       uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
       with:
-        target_sync_branch: master
+        target_sync_branch: v1-lts-lol
         target_repo_token: ${{ secrets.GITHUB_TOKEN }}
-        upstream_sync_branch: master
+        upstream_sync_branch: v1-lts-lol
         upstream_sync_repo: mtripg6666tdr/Discord-SimpleMusicBot
 
     - name: New commits found
